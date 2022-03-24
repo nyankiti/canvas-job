@@ -29,16 +29,16 @@ window.addEventListener("mousemove", function (event) {
 });
 
 window.addEventListener("touchstart", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
 });
 window.addEventListener("touchend", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
+  mouse.x = event.clientX;
+  mouse.y = event.clientT;
 });
 window.addEventListener("touchmove", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
 });
 
 function drawCircle() {

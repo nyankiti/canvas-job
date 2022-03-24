@@ -37,22 +37,22 @@ window.addEventListener("mousemove", function (event) {
 });
 
 window.addEventListener("touchstart", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
   for (let i = 0; i < 10; i++) {
     particleArray.push(new Particle());
   }
 });
 window.addEventListener("touchend", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
+  mouse.x = event.clientX;
+  mouse.y = event.clientT;
   for (let i = 0; i < 10; i++) {
     particleArray.push(new Particle());
   }
 });
 window.addEventListener("touchmove", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
   for (let i = 0; i < 10; i++) {
     particleArray.push(new Particle());
   }

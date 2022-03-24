@@ -36,16 +36,16 @@ window.addEventListener("mousemove", function (event) {
   mouse.y = event.y;
 });
 window.addEventListener("touchstart", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
 });
 window.addEventListener("touchend", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
+  mouse.x = event.clientX;
+  mouse.y = event.clientT;
 });
 window.addEventListener("touchmove", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
 });
 
 // カプセル化してプログラムの依存性を低く保つ
