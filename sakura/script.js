@@ -84,5 +84,30 @@ function handleParticle() {
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   handleParticle();
+  drawText();
   requestAnimationFrame(animate);
+}
+
+function drawText() {
+  // textアニメーションの実装
+  ctx.font = "48px serif";
+  ctx.fillText(
+    "Gift王寺駅前自習室 in Nara",
+    canvas.width / 2 - 310,
+    canvas.height / 2
+  );
+}
+
+// 別々にsetIntervalすると、animationと両立できない！！！
+function fadeOut(text) {
+  let alpha = 1.0, // full opacity
+    interval = setInterval(function () {
+      // ctx.fillStyle = "rgba(50, 50, 50, " + alpha + ")";
+      ctx.font = "48px serif";
+      ctx.fillText(text, 50, 50);
+      alpha = alpha - 0.05; // decrease opacity (fade out)
+      if (alpha < 0) {
+        clearInterval(interval);
+      }
+    }, 50);
 }

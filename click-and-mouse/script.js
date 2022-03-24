@@ -28,6 +28,19 @@ window.addEventListener("mousemove", function (event) {
   mouse.y = event.y;
 });
 
+window.addEventListener("touchstart", function (event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+});
+window.addEventListener("touchend", function (event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+});
+window.addEventListener("touchmove", function (event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+});
+
 function drawCircle() {
   ctx.fillStyle = "blue";
   ctx.beginPath();

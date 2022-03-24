@@ -35,6 +35,18 @@ window.addEventListener("mousemove", function (event) {
   mouse.x = event.x;
   mouse.y = event.y;
 });
+window.addEventListener("touchstart", function (event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+});
+window.addEventListener("touchend", function (event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+});
+window.addEventListener("touchmove", function (event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+});
 
 // カプセル化してプログラムの依存性を低く保つ
 class FlowFieldEffect {
