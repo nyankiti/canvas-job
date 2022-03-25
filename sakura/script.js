@@ -20,7 +20,7 @@ const sakuraArray = [];
 const rad = Math.PI / 180;
 
 const img = new Image();
-img.src = "http://www.otwo.jp/blog/demo/canvas/images/web/sakura.png";
+img.src = "./sakura.png";
 img.onload = animate;
 
 const imgBaseSizeW = 15;
@@ -28,8 +28,8 @@ const imgBaseSizeH = 18.5;
 const speedMax = 1.7;
 const speedMin = 0.5;
 const wind = 10;
-const aspectMax = 1.3;
-const aspectMin = 0.5;
+const aspectMax = 1.8;
+const aspectMin = 1;
 
 class Sakura {
   constructor() {
@@ -84,7 +84,7 @@ function handleParticle() {
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   handleParticle();
-  drawText();
+  // drawText();
   requestAnimationFrame(animate);
 }
 
